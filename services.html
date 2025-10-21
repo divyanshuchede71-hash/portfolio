@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+         background-image: url('photos/bg.png');
+        background-color: rgb(0, 0, 33); 
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(3, 3, 75);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        transition: all 0.3s ease;
+      }
+      nav ul li a:hover {
+        color: cyan;
+        font-size: 1.05rem;
+      }
+      main hr {
+        border: 0;
+        background: rgb(87, 54, 87);
+        height: 1.2px;
+        margin: 40px 84px;
+      }
+      .left {
+        font-size: 2rem;
+      }
+
+      .purple {
+        color: violet;
+      }
+      .violet {
+        color: rgb(255, 0, 255);
+      }
+      .text-gray {
+        color: gray;
+      }
+
+      /* Services Section Styles */
+      .servicesSection {
+        max-width: 80vw;
+        margin: auto;
+        padding: 80px 0;
+        text-align: center;
+      }
+      .servicesSection h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: white;
+      }
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+      }
+      .service-box {
+        background-color: rgb(3, 3, 75);
+        padding: 40px 30px;
+        border-radius: 10px;
+        border-top: 5px solid violet;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        text-align: left;
+        transition: transform 0.3s ease, border-top-color 0.3s ease;
+      }
+      .service-box:hover {
+        transform: translateY(-5px);
+        border-top-color: cyan;
+      }
+      .service-box h2 {
+        color: cyan;
+        margin-bottom: 15px;
+        font-size: 1.6rem;
+      }
+      .service-box p {
+        color: #ccc;
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+      .service-box ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      .service-box ul li {
+        color: gray;
+        margin-bottom: 8px;
+        position: relative;
+        padding-left: 20px;
+        font-size: 0.95rem;
+      }
+      .service-box ul li::before {
+        content: '✓';
+        color: violet;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+      }
+      /* End of Services Section Styles */
+
+      footer {
+        background-color: rgb(3, 3, 75);
+        padding: 20px 0;
+        height: auto;
+        padding: 20px;
+      }
+
+      .footer {
+        display: flex;
+        max-width: 80vw;
+        margin: auto;
+        justify-content: space-evenly;
+        padding: 20px 0;
+        gap: 30px;
+        flex-direction: row;
+      }
+      .footer div {
+        width: 25%;
+      }
+      .footer h2 {
+        color: white;
+        margin-bottom: 15px;
+      }
+
+      .footer .second ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer .second li {
+        margin-bottom: 8px;
+        color: gray;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+      .footer .second li:hover {
+        color: white;
+      }
+      .footer a {
+        color: gray;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      .footer a:hover {
+        color: white;
+      }
+
+      footer .footer-rights {
+        text-align: center;
+        color: gray;
+        width: 100%;
+        margin-top: 15px;
+      }
+
+      @media screen and (max-width: 1200px) {
+        nav {
+          flex-direction: column;
+          height: auto;
+          padding: 10px 0;
+        }
+        nav ul {
+          margin-top: 10px;
+        }
+        main hr {
+          margin: 40px 20px;
+        }
+
+        .servicesSection {
+            padding: 40px 10px;
+        }
+
+        .footer {
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+        }
+        .footer div {
+          width: 100%;
+          max-width: 300px;
+          text-align: center;
+        }
+        .footer .second ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 15px;
+        }
+        .footer .second li {
+          margin-bottom: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="left">Divyanshu's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="contactme.html">Contact me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="servicesSection">
+        <span class="text-gray" style="display: block; margin-bottom: 10px;">What I can offer</span>
+        <h1>My Services</h1>
+
+        <div class="service-grid">
+            <div class="service-box">
+                <h2>Front-End Development</h2>
+                <p>Building beautiful, fast, and responsive user interfaces that provide an excellent user experience across all devices.</p>
+                <ul>
+                    <li>Responsive Web Design (HTML, CSS)</li>
+                    <li>Interactive UI with JavaScript</li>
+                    <li>Website optimization for speed</li>
+                    <li>Fixing UI/UX issues</li>
+                </ul>
+            </div>
+
+            <div class="service-box">
+                <h2>Freelance Web Projects</h2>
+                <p>Taking on small to medium-sized web projects, helping individuals and businesses establish a strong online presence.</p>
+                <ul>
+                    <li>Landing Page Development</li>
+                    <li>Personal Portfolio Websites</li>
+                    <li>Simple Blog and Information Sites</li>
+                    <li>Custom HTML/CSS template implementation</li>
+                </ul>
+            </div>
+
+            <div class="service-box">
+                <h2>Coding & Problem Solving</h2>
+                <p>Applying strong foundational knowledge in Computer Science to solve logical and algorithmic challenges efficiently.</p>
+                <ul>
+                    <li>Data Structures and Algorithms (DSA) implementation</li>
+                    <li>Code review and optimization</li>
+                    <li>General programming tasks (using C/C++)</li>
+                    <li>Mentorship for beginners (HTML/CSS/JS)</li>
+                </ul>
+            </div>
+
+            <div class="service-box">
+                <h2>Open Source Contribution</h2>
+                <p>Actively contributing to open-source projects, focusing on code improvements, bug fixes, and documentation.</p>
+                <ul>
+                    <li>Submitting Pull Requests (PRs)</li>
+                    <li>Improving project documentation</li>
+                    <li>Bug reporting and fixing</li>
+                    <li>Feature implementation (beginner-level)</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+
+      <hr />
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="first">
+          <h2>Divyanshu's Portfolio</h2>
+          <p style="color: gray; font-size: 0.9rem">
+            Passionate CSE student and aspiring Web Developer.
+          </p>
+        </div>
+        <div class="second">
+          <h2>Quick Links</h2>
+          <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Projects</li>
+            <li>Contact Me</li>
+          </ul>
+        </div>
+        <div class="third">
+          <h2>Contact</h2>
+          <p style="color: gray">Email: divyanshuchede71@gmail.com</p>
+          <p style="color: gray">Phone: +91 9309291459</p>
+        </div>
+        <div class="fourth">
+          <h2>Connect</h2>
+          <p>
+            <a href="https://www.linkedin.com/in/dchede24">
+            LinkedIn</a></p>
+          <p><a href="https://github.com/divyanshuchede71-hash">GitHub</a></p>
+        </div>
+      </div>
+      <div class="footer-rights">
+        Copyright &#169; divyanshusportfolio.com | All Rights Reserved
+      </div>
+    </footer>
+  </body>
+</html>
