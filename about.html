@@ -66,7 +66,7 @@
         justify-content: center;
         max-width: 80vw;
         margin: auto;
-        padding: 40px 0 0 0;
+        padding: 0;
       }
       .aboutPageSection > div {
         width: 100%;
@@ -78,19 +78,19 @@
         justify-content: center;
         align-items: center;
         padding-top: 0;
-        margin-bottom: 0px; 
+        margin-bottom: 20px;
       }
       .aboutRightSection img {
         width: 100%;
         max-width: 200px;
         border-radius: 50%;
-        box-shadow: none;
+        box-shadow: 0 0 15px violet;
       }
 
       .leftSection {
         font-size: 1.1rem;
         color: wheat;
-        margin: 0px 0;
+        margin: 0;
         text-align: justify;
         max-width: 900px;
         width: 100%;
@@ -125,43 +125,10 @@
         color: gray;
       }
 
-      .secondSection {
-        max-width: 80vw;
-        margin: auto;
-        padding-bottom: 50px;
-      }
-      .secondSection h1 {
-        font-size: 1.9rem;
-        margin-bottom: 30px;
-        text-align: center;
-      }
-      .education-box {
-        background-color: rgb(3, 3, 75);
-        padding: 30px;
-        border-radius: 10px;
-        border-left: 5px solid violet;
-        max-width: 600px;
-        margin: 0 auto;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-      .education-box h2 {
-        color: cyan;
-        margin-bottom: 5px;
-        font-size: 1.5rem;
-      }
-      .education-box p {
-        margin: 5px 0;
-        font-size: 1rem;
-      }
-      .education-box .date {
-        color: gray;
-        font-size: 0.9rem;
-      }
-
       .aboutSection {
         max-width: 80vw;
         margin: auto;
-        padding: 20px 0; 
+        padding: 40px 0;
         text-align: center;
       }
       .aboutSection h1 {
@@ -259,6 +226,7 @@
       }
       .footer a:hover {
         color: white;
+        text-decoration: underline;
       }
 
       footer .footer-rights {
@@ -268,50 +236,81 @@
         margin-top: 15px;
       }
 
-      @media screen and (max-width: 1200px) {
-        .aboutPageSection {
-          flex-direction: column;
-          text-align: center;
+      /* Mobile-Oriented Styles (Max-width 768px) */
+      @media screen and (max-width: 768px) {
+        body {
+          font-size: 16px;
         }
-        .aboutPageSection > div {
-          width: 90%;
-          min-width: unset;
+        main {
+          padding-bottom: 30px;
         }
-        .aboutRightSection {
-          margin-bottom: 20px;
-          justify-content: center;
-        }
-        .aboutRightSection img {
-          width: 50%;
-          max-width: 150px;
-          margin-top: 0%;
-        }
-        .leftSection {
-          font-size: 1.1rem;
-          text-align: left;
-        }
+
         nav {
           flex-direction: column;
           height: auto;
-          padding: 10px 0;
+          padding: 15px 0;
+        }
+        nav .left {
+          font-size: 1.5rem;
         }
         nav ul {
           margin-top: 10px;
+          flex-wrap: wrap;
+          justify-content: center;
         }
-        .secondSection h1 {
-          text-align: center;
+        nav ul li {
+          margin: 5px 8px;
         }
+        nav ul li a {
+          font-size: 0.9rem;
+        }
+
         main hr {
-          margin: 40px 20px;
+          margin: 30px 5vw;
+        }
+
+        .aboutSection {
+          max-width: 90vw;
+          padding: 20px 0;
+        }
+        .aboutSection h1 {
+          font-size: 2rem;
+        }
+        .text-gray {
+          display: block;
+          margin-bottom: 5px !important;
+        }
+
+        .aboutRightSection img {
+          max-width: 150px;
+        }
+
+        .about-content-text p {
+          font-size: 1rem;
+          text-align: left;
+          padding: 0 5px;
+        }
+
+        .skills-section h2 {
+          font-size: 1.5rem;
+        }
+        .skills-list {
+          gap: 10px;
+          padding: 0 10px;
+        }
+        .skill-tag {
+          font-size: 0.85rem;
+          padding: 6px 12px;
         }
 
         .footer {
           flex-direction: column;
           align-items: center;
           gap: 30px;
+          max-width: 90vw;
         }
         .footer div {
-          width: 100%;
+          width: 90%;
           max-width: 300px;
           text-align: center;
         }
@@ -319,17 +318,27 @@
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
-          gap: 15px;
+          gap: 10px 15px;
         }
         .footer .second li {
           margin-bottom: 0;
         }
+      }
+
+      /* Tablet Adjustments (769px to 1200px) */
+      @media screen and (min-width: 769px) and (max-width: 1200px) {
         .aboutSection {
-          padding: 40px 0px;
+          max-width: 90vw;
         }
-        .about-content-text p {
-          text-align: left;
-          padding: 0 10px;
+        .aboutRightSection img {
+          max-width: 180px;
+        }
+        main hr {
+          margin: 40px 5vw;
+        }
+        .footer {
+          max-width: 90vw;
+          gap: 20px;
         }
       }
     </style>
@@ -367,20 +376,20 @@
             <div class="about-content-text">
               <p>
                 Hello! I'm <span class="purple">Divyanshu</span>, a passionate
-                and driven Computer Science and Engineering (CSE) student
-                currently in my first year at the Government College Of
-                Engineering Nagpur. I began my B.Tech journey in 2025 and I'm on
+                and driven **Computer Science and Engineering (CSE)** student
+                currently in my first year at the **Government College Of
+                Engineering Nagpur**. I began my B.Tech journey in 2025 and I'm on
                 track to graduate in 2029.
               </p>
               <p>
-                I enjoy bringing ideas to life on the internet,like designing
-                clean and responsive user interfaces . I believe in continuous
+                I enjoy bringing ideas to life on the internet, like designing
+                clean and responsive user interfaces. I believe in continuous
                 learning and currently dedicate my time to mastering modern web
                 technologies.
               </p>
               <p>
                 I am actively seeking opportunities to contribute to open-source
-                projects and gain real-world experience as a Software Developer
+                projects and gain real-world experience as a **Software Developer**
                 . My goal is to upgrade my coding skills to solve practical
                 problems and create impactful digital experiences.
               </p>
@@ -438,7 +447,7 @@
         </div>
       </div>
       <div class="footer-rights">
-        Copyright &#169; divyanshusportfolio.com | All Rights Reserved
+        Copyright &#169;  | All Rights Reserved
       </div>
     </footer>
   </body>
