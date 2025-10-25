@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -18,7 +18,7 @@
       }
       body {
         background-image: url('photos/bg.png');
-        background-color: rgb(0, 0, 33); 
+        background-color: rgb(0, 0, 33);
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -70,7 +70,6 @@
         color: gray;
       }
 
-      
       .projectsSection {
         max-width: 80vw;
         margin: auto;
@@ -127,7 +126,6 @@
         margin-bottom: 5px;
       }
 
-     
       .empty-state {
         margin-top: 60px;
         padding: 50px;
@@ -148,7 +146,6 @@
       .empty-state a:hover {
         color: cyan;
       }
-    
 
       footer {
         background-color: rgb(3, 3, 75);
@@ -203,30 +200,74 @@
         margin-top: 15px;
       }
 
-      @media screen and (max-width: 1200px) {
+      /* Mobile-Oriented Styles (Max-width 768px) */
+      @media screen and (max-width: 768px) {
+        body {
+          font-size: 16px;
+        }
+
         nav {
           flex-direction: column;
           height: auto;
-          padding: 10px 0;
+          padding: 15px 0;
+        }
+        nav .left {
+          font-size: 1.5rem;
         }
         nav ul {
           margin-top: 10px;
+          flex-wrap: wrap;
+          justify-content: center;
         }
+        nav ul li {
+          margin: 5px 8px;
+        }
+        nav ul li a {
+          font-size: 0.9rem;
+        }
+
         main hr {
-          margin: 40px 20px;
+          margin: 30px 5vw;
         }
 
         .projectsSection {
-            padding: 40px 10px;
+          max-width: 90vw;
+          padding: 40px 0;
+        }
+        .projectsSection h1 {
+          font-size: 2rem;
+          margin-bottom: 30px;
+        }
+        .project-card {
+          padding: 20px;
+          margin: 0 5px;
+        }
+        .project-card h2 {
+          font-size: 1.5rem;
+        }
+        .project-card p {
+          font-size: 0.95rem;
+        }
+        .empty-state {
+          padding: 30px;
+          margin: 40px auto;
+        }
+        .empty-state p {
+          font-size: 1rem;
+        }
+        .project-card .tag {
+            font-size: 0.8rem;
+            padding: 4px 8px;
         }
 
         .footer {
           flex-direction: column;
           align-items: center;
           gap: 30px;
+          max-width: 90vw;
         }
         .footer div {
-          width: 100%;
+          width: 90%;
           max-width: 300px;
           text-align: center;
         }
@@ -234,10 +275,24 @@
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
-          gap: 15px;
+          gap: 10px 15px;
         }
         .footer .second li {
           margin-bottom: 0;
+        }
+      }
+
+      /* Tablet Adjustments (769px to 1200px) */
+      @media screen and (min-width: 769px) and (max-width: 1200px) {
+        .projectsSection {
+          max-width: 90vw;
+          padding: 60px 0;
+        }
+        main hr {
+          margin: 40px 5vw;
+        }
+        .footer {
+          max-width: 90vw;
         }
       }
     </style>
@@ -262,6 +317,7 @@
       <section class="projectsSection">
         <span class="text-gray" style="display: block; margin-bottom: 10px;">My journey in code so far</span>
         <h1>My Projects</h1>
+        <div class="project-container">
             <div class="project-card">
                 <h2>Early Algorithmic Implementations</h2>
                 <p>Initial attempts at solving classic computer science problems, exploring data structures and foundational logic in a programming environment.</p>
@@ -312,7 +368,7 @@
         </div>
       </div>
       <div class="footer-rights">
-        Copyright &#169; divyanshusportfolio.com | All Rights Reserved
+        Copyright &#169;  | All Rights Reserved
       </div>
     </footer>
   </body>
