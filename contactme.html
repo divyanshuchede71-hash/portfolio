@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -18,7 +18,7 @@
       }
       body {
         background-image: url('photos/bg.png');
-        background-color: rgb(0, 0, 33); 
+        background-color: rgb(0, 0, 33);
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -70,7 +70,6 @@
         color: gray;
       }
 
-      /* Contact Section Styles */
       .contactSection {
         max-width: 80vw;
         margin: auto;
@@ -95,9 +94,9 @@
         padding: 40px;
         border-radius: 10px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        max-width: 600px; 
+        max-width: 600px;
         text-align: left;
-        border-left: 5px solid violet; 
+        border-left: 5px solid violet;
       }
       .contact-info h2 {
         color: cyan;
@@ -115,6 +114,7 @@
         transition: color 0.3s;
         display: block;
         margin-top: 5px;
+        word-break: break-all;
       }
       .contact-info a:hover {
         color: violet;
@@ -125,14 +125,13 @@
         border-top: 1px solid rgb(14 14 93);
       }
       .social-links h3 {
-          color: violet;
-          margin-bottom: 15px;
-          font-size: 1.4rem;
+        color: violet;
+        margin-bottom: 15px;
+        font-size: 1.4rem;
       }
       .social-links p {
-          margin-bottom: 10px;
+        margin-bottom: 10px;
       }
-      /* End of Contact Section Styles */
 
       footer {
         background-color: rgb(3, 3, 75);
@@ -187,39 +186,69 @@
         margin-top: 15px;
       }
 
-      @media screen and (max-width: 1200px) {
+      @media screen and (max-width: 768px) {
+        body {
+          font-size: 16px;
+        }
+
         nav {
           flex-direction: column;
           height: auto;
-          padding: 10px 0;
+          padding: 15px 0;
+        }
+        nav .left {
+          font-size: 1.5rem;
         }
         nav ul {
           margin-top: 10px;
+          flex-wrap: wrap;
+          justify-content: center;
         }
+        nav ul li {
+          margin: 5px 8px;
+        }
+        nav ul li a {
+          font-size: 0.9rem;
+        }
+
         main hr {
-          margin: 40px 20px;
+          margin: 30px 5vw;
         }
 
         .contactSection {
-            padding: 40px 10px;
+          max-width: 90vw;
+          padding: 40px 0;
+        }
+        .contactSection h1 {
+          font-size: 2rem;
+          margin-bottom: 30px;
         }
         .contact-container {
-            flex-direction: column;
-            gap: 30px;
-            align-items: center;
+          flex-direction: column;
+          gap: 30px;
+          align-items: center;
         }
         .contact-info {
-            max-width: 90%;
-            width: 100%;
-            padding: 30px;
+          max-width: 90%;
+          width: 100%;
+          padding: 30px 20px;
+          margin: 0 auto;
         }
+        .contact-info h2 {
+          font-size: 1.4rem;
+        }
+        .contact-info p {
+          font-size: 0.95rem;
+        }
+
         .footer {
           flex-direction: column;
           align-items: center;
           gap: 30px;
+          max-width: 90vw;
         }
         .footer div {
-          width: 100%;
+          width: 90%;
           max-width: 300px;
           text-align: center;
         }
@@ -227,10 +256,27 @@
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
-          gap: 15px;
+          gap: 10px 15px;
         }
         .footer .second li {
           margin-bottom: 0;
+        }
+      }
+
+      @media screen and (min-width: 769px) and (max-width: 1200px) {
+        .contactSection {
+          max-width: 90vw;
+          padding: 60px 0;
+        }
+        .contact-info {
+            max-width: 90%;
+            padding: 40px;
+        }
+        main hr {
+          margin: 40px 5vw;
+        }
+        .footer {
+          max-width: 90vw;
         }
       }
     </style>
@@ -261,22 +307,22 @@
                 <h2>Direct & Professional Contact</h2>
                 <p>Feel free to reach out directly via email or phone for project ideas, freelance inquiries, or collaborations. I look forward to connecting!</p>
                 <p>
-                    <strong>Email:</strong> 
+                    <strong>Email:</strong>
                     <a href="mailto:divyanshuchede71@gmail.com">divyanshuchede71@gmail.com</a>
                 </p>
                 <p>
-                    <strong>Phone:</strong> 
+                    <strong>Phone:</strong>
                     <a href="tel:+919309291459">+91 9309291459</a>
                 </p>
                 <p>
-                    <strong>LinkedIn:</strong> 
+                    <strong>LinkedIn:</strong>
                     <a href="https://www.linkedin.com/in/dchede24" target="_blank">linkedin.com/in/dchede24</a>
                 </p>
                 <p>
-                    <strong>GitHub:</strong> 
+                    <strong>GitHub:</strong>
                     <a href="https://github.com/divyanshuchede71-hash" target="_blank">github.com/divyanshuchede71-hash</a>
                 </p>
-                
+
                 <div class="social-links">
                     <h3>Connect on Social Media</h3>
                     <p>
@@ -286,7 +332,6 @@
                     <p>
                         <strong>Facebook:</strong>
                         <a href="https://www.facebook.com/divyanshu.chede" target="_blank">divyanshuchede</a>
-                        
                     </p>
                 </div>
             </div>
@@ -297,13 +342,8 @@
     </main>
     <footer>
       <div class="footer">
+        
         <div class="first">
-          <h2>Divyanshu's Portfolio</h2>
-          <p style="color: gray; font-size: 0.9rem">
-            Passionate CSE student and aspiring Web Developer.
-          </p>
-        </div>
-        <div class="second">
           <h2>Quick Links</h2>
           <ul>
             <li>Home</li>
@@ -313,12 +353,12 @@
             <li>Contact Me</li>
           </ul>
         </div>
-        <div class="third">
+        <div class="second">
           <h2>Contact</h2>
           <p style="color: gray">Email: divyanshuchede71@gmail.com</p>
           <p style="color: gray">Phone: +91 9309291459</p>
         </div>
-        <div class="fourth">
+        <div class="third">
           <h2>Connect</h2>
           <p>
             <a href="https://www.linkedin.com/in/dchede24">
@@ -327,7 +367,7 @@
         </div>
       </div>
       <div class="footer-rights">
-        Copyright &#169; divyanshusportfolio.com | All Rights Reserved
+        Copyright &#169;  | All Rights Reserved
       </div>
     </footer>
   </body>
