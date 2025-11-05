@@ -1,1 +1,315 @@
-created index.css
+  
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: url('photos/bg.png');
+        background-color: rgb(31, 7, 36);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(3, 3, 75);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        transition: all 0.3s ease;
+      }
+      nav ul li a:hover {
+        color: cyan;
+        font-size: 1.05rem;
+      }
+      main hr {
+        border: 0;
+        background: rgb(87, 54, 87);
+        height: 1.2px;
+        margin: 40px 84px;
+      }
+      .left {
+        font-size: 2rem;
+      }
+
+      .firstSection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        max-width: 80vw;
+        margin: auto;
+        padding: 80px 0;
+      }
+      .firstSection > div {
+        width: 40%;
+        background-color: transparent;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .leftSection {
+        font-size: 2.5rem;
+        color: wheat;
+        margin: 70px 0;
+      }
+      .leftSection .buttons {
+        padding: 50px 0;
+        display: flex;
+        gap: 15px;
+      }
+
+      .leftSection .btn {
+        color: whitesmoke;
+        padding: 12px;
+        background-color: rgb(14 14 93);
+        border: 2px solid white;
+        border-radius: 19px;
+        font-size: 20px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .rightSection img {
+        width: 80%;
+        margin: 50px;
+      }
+      .purple {
+        color: violet;
+      }
+      .violet {
+        color: rgb(255, 0, 255);
+      }
+      #typed-text {
+        color: cyan;
+      }
+      .text-gray {
+        color: gray;
+      }
+
+      .secondSection {
+        max-width: 80vw;
+        margin: auto;
+        padding-bottom: 50px;
+      }
+      .secondSection h1 {
+        font-size: 1.9rem;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .education-box {
+        background-color: rgb(3, 3, 75);
+        padding: 30px;
+        border-radius: 10px;
+        border-left: 5px solid violet;
+        max-width: 600px;
+        margin: 0 auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .education-box h2 {
+        color: cyan;
+        margin-bottom: 5px;
+        font-size: 1.5rem;
+      }
+      .education-box p {
+        margin: 5px 0;
+        font-size: 1rem;
+      }
+      .education-box .date {
+        color: gray;
+        font-size: 0.9rem;
+      }
+
+      footer {
+        background-color: rgb(3, 3, 75);
+        padding: 20px 0;
+        height: auto;
+        padding: 20px;
+      }
+
+      .footer {
+        display: flex;
+        max-width: 80vw;
+        margin: auto;
+        justify-content: space-evenly;
+        padding: 20px 0;
+        gap: 30px;
+        flex-direction: row;
+      }
+      .footer div {
+        width: 25%;
+      }
+      .footer h2 {
+        color: white;
+        margin-bottom: 15px;
+      }
+
+      .footer .second ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer .second li {
+        margin-bottom: 8px;
+        color: gray;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+      .footer .second li:hover {
+        color: white;
+      }
+
+      .footer .fourth a {
+        color: gray;
+        text-decoration: none;
+      }
+
+      .footer .fourth a:hover {
+        color: white;
+        text-decoration: underline;
+      }
+
+      footer .footer-rights {
+        text-align: center;
+        color: gray;
+        width: 100%;
+        margin-top: 15px;
+      }
+      @media screen and (max-width: 768px) {
+        body {
+          font-size: 16px;
+        }
+
+        nav {
+          flex-direction: column;
+          height: auto;
+          padding: 15px 0;
+        }
+        nav .left {
+          font-size: 1.5rem;
+        }
+        nav ul {
+          margin-top: 10px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        nav ul li {
+          margin: 5px 10px;
+        }
+        nav ul li a {
+          font-size: 0.9rem;
+        }
+
+        main hr {
+          margin: 30px 5vw;
+        }
+
+        .firstSection {
+          flex-direction: column-reverse;
+          text-align: center;
+          max-width: 90vw;
+          padding: 40px 0;
+        }
+        .firstSection > div {
+          width: 100%;
+          padding: 10px;
+        }
+        .leftSection {
+          font-size: 1.8rem;
+          margin: 30px 0;
+        }
+        .leftSection .buttons {
+          padding: 20px 0;
+          flex-direction: column;
+          align-items: center;
+        }
+        .leftSection .btn {
+          width: 80%;
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+        .rightSection img {
+          width: 70%;
+          margin: 20px auto;
+          display: block;
+        }
+
+        .secondSection {
+          max-width: 90vw;
+          padding-bottom: 30px;
+        }
+        .secondSection h1 {
+          font-size: 1.5rem;
+        }
+        .education-box {
+          padding: 20px;
+        }
+        .education-box h2 {
+          font-size: 1.2rem;
+        }
+        .education-box p {
+          font-size: 0.9rem;
+        }
+
+        .footer {
+          flex-direction: column;
+          align-items: center;
+          gap: 30px;
+          max-width: 90vw;
+        }
+        .footer div {
+          width: 90%;
+          max-width: 400px;
+          text-align: center;
+        }
+        .footer .second ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px 15px;
+        }
+        .footer .second li {
+          margin-bottom: 0;
+        }
+      }
+
+      /* Optional: Adjustments for slightly larger mobile/tablet screens */
+      @media screen and (min-width: 769px) and (max-width: 1200px) {
+        .firstSection {
+          max-width: 90vw;
+        }
+        .firstSection > div {
+          width: 45%;
+        }
+        .leftSection {
+          font-size: 2.2rem;
+          margin: 50px 0;
+        }
+        .rightSection img {
+          width: 90%;
+          margin: 30px;
+        }
+        main hr {
+          margin: 40px 5vw;
+        }
+        .footer {
+          max-width: 90vw;
+          gap: 20px;
+        }
+        .footer div {
+          width: 25%;
+        }
+      }
+  
