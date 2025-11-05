@@ -5,7 +5,7 @@
         box-sizing: border-box;
       }
       body {
-        background-image: url('photos/bg.png');
+        background-image: url('bg.png');
         background-color: rgb(31, 7, 36);
         background-size: cover;
         background-position: center;
