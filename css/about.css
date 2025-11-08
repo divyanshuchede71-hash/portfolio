@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('photos/bg.png');
+  background-color: rgb(0, 0, 33);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  background-color: rgb(3, 3, 75);
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  list-style: none;
+  margin: 0 23px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+nav ul li a:hover {
+  color: cyan;
+  font-size: 1.05rem;
+}
+main hr {
+  border: 0;
+  background: rgb(87, 54, 87);
+  height: 1.2px;
+  margin: 40px 84px;
+}
+.left {
+  font-size: 2rem;
+}
+
+.aboutPageSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 80vw;
+  margin: auto;
+  padding: 0;
+}
+.aboutPageSection > div {
+  width: 100%;
+  min-width: 300px;
+}
+
+.aboutRightSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+  margin-bottom: 20px;
+}
+.aboutRightSection img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px violet;
+}
+
+.leftSection {
+  font-size: 1.1rem;
+  color: wheat;
+  margin: 0;
+  text-align: justify;
+  max-width: 900px;
+  width: 100%;
+}
+.leftSection p {
+  margin-bottom: 25px;
+}
+.leftSection .buttons {
+  padding: 50px 0;
+}
+
+.leftSection .btn {
+  color: whitesmoke;
+  padding: 12px;
+  background-color: rgb(14 14 93);
+  border: 2px solid white;
+  border-radius: 19px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.purple {
+  color: violet;
+}
+.violet {
+  color: rgb(255, 0, 255);
+}
+#typed-text {
+  color: cyan;
+}
+.text-gray {
+  color: gray;
+}
+
+.aboutSection {
+  max-width: 80vw;
+  margin: auto;
+  padding: 40px 0;
+  text-align: center;
+}
+.aboutSection h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+.about-content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.about-content-text p {
+  font-size: 1.1rem;
+  color: #ccc;
+  text-align: justify;
+  padding: 0 15px;
+}
+.about-content-text strong {
+  color: cyan;
+}
+.skills-section {
+  margin-top: 40px;
+}
+.skills-section h2 {
+  text-align: center;
+  color: violet;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.skill-tag {
+  background-color: rgb(14 14 93);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid violet;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
+}
+.skill-tag:hover {
+  background-color: violet;
+  border-color: cyan;
+}
+
+footer {
+  background-color: rgb(3, 3, 75);
+  padding: 20px 0;
+  height: auto;
+  padding: 20px;
+}
+
+.footer {
+  display: flex;
+  max-width: 80vw;
+  margin: auto;
+  justify-content: space-evenly;
+  padding: 20px 0;
+  gap: 30px;
+  flex-direction: row;
+}
+.footer div {
+  width: 25%;
+}
+.footer h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.footer .second ul {
+  list-style: none;
+  padding: 0;
+}
+.footer .second li {
+  margin-bottom: 8px;
+}
+
+/* --- CHANGED QUICK LINK TEXT COLOR HERE --- */
+.footer .second li a {
+  color: #DDA0DD; /* Changed from gray to Light Purple */
+  cursor: pointer;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+.footer .second li a:hover {
+  color: white;
+}
+/* --- Fallback/Other links --- */
+.footer a {
+  color: #DDA0DD; /* Changed from gray to Light Purple (for Connect links) */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+footer .footer-rights {
+  text-align: center;
+  color: gray;
+  width: 100%;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  main {
+    padding-bottom: 30px;
+  }
+
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+  }
+  nav .left {
+    font-size: 1.5rem;
+  }
+  nav ul {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav ul li {
+    margin: 5px 8px;
+  }
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  main hr {
+    margin: 30px 5vw;
+  }
+
+  .aboutSection {
+    max-width: 90vw;
+    padding: 20px 0;
+  }
+  .aboutSection h1 {
+    font-size: 2rem;
+  }
+  .text-gray {
+    display: block;
+    margin-bottom: 5px !important;
+  }
+
+  .aboutRightSection img {
+    max-width: 150px;
+  }
+
+  .about-content-text p {
+    font-size: 1rem;
+    text-align: left;
+    padding: 0 5px;
+  }
+
+  .skills-section h2 {
+    font-size: 1.5rem;
+  }
+  .skills-list {
+    gap: 10px;
+    padding: 0 10px;
+  }
+  .skill-tag {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 90vw;
+  }
+  .footer div {
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+  }
+  .footer .second ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 15px;
+  }
+  .footer .second li {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .aboutSection {
+    max-width: 90vw;
+  }
+  .aboutRightSection img {
+    max-width: 180px;
+  }
+  main hr {
+    margin: 40px 5vw;
+  }
+  .footer {
+    max-width: 90vw;
+    gap: 20px;
+  }
+}
