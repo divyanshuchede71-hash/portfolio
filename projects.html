@@ -10,292 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        background-image: url('photos/bg.png');
-        background-color: rgb(0, 0, 33);
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        color: white;
-        font-family: "Poppins", sans-serif;
-      }
-
-      nav {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 80px;
-        background-color: rgb(3, 3, 75);
-      }
-      nav ul {
-        display: flex;
-        justify-content: center;
-      }
-      nav ul li {
-        list-style: none;
-        margin: 0 23px;
-      }
-      nav ul li a {
-        text-decoration: none;
-        color: white;
-        transition: all 0.3s ease;
-      }
-      nav ul li a:hover {
-        color: cyan;
-        font-size: 1.05rem;
-      }
-      main hr {
-        border: 0;
-        background: rgb(87, 54, 87);
-        height: 1.2px;
-        margin: 40px 84px;
-      }
-      .left {
-        font-size: 2rem;
-      }
-
-      .purple {
-        color: violet;
-      }
-      .violet {
-        color: rgb(255, 0, 255);
-      }
-      .text-gray {
-        color: gray;
-      }
-
-      .projectsSection {
-        max-width: 80vw;
-        margin: auto;
-        padding: 80px 0;
-        text-align: center;
-        min-height: 50vh;
-      }
-      .projectsSection h1 {
-        font-size: 2.5rem;
-        margin-bottom: 50px;
-        color: white;
-      }
-      .project-container {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-      }
-      .project-card {
-        background-color: rgb(3, 3, 75);
-        padding: 30px;
-        border-radius: 10px;
-        border-left: 5px solid violet;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        text-align: left;
-        max-width: 900px;
-        margin: 0 auto;
-        transition: transform 0.3s ease;
-      }
-      .project-card:hover {
-        transform: translateY(-5px);
-        border-left-color: cyan;
-      }
-      .project-card h2 {
-        color: cyan;
-        margin-bottom: 10px;
-        font-size: 1.8rem;
-      }
-      .project-card p {
-        color: #ccc;
-        font-size: 1rem;
-        margin-bottom: 15px;
-      }
-      .project-card .tags {
-        margin-top: 15px;
-      }
-      .project-card .tag {
-        display: inline-block;
-        background-color: rgb(14 14 93);
-        color: violet;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-size: 0.85rem;
-        margin-right: 10px;
-        margin-bottom: 5px;
-      }
-
-      .empty-state {
-        margin-top: 60px;
-        padding: 50px;
-        border: 1px dashed gray;
-        border-radius: 10px;
-        max-width: 600px;
-        margin: 60px auto;
-      }
-      .empty-state p {
-        font-size: 1.2rem;
-        color: wheat;
-      }
-      .empty-state a {
-        color: violet;
-        text-decoration: none;
-        transition: color 0.3s;
-      }
-      .empty-state a:hover {
-        color: cyan;
-      }
-
-      footer {
-        background-color: rgb(3, 3, 75);
-        padding: 20px 0;
-        height: auto;
-        padding: 20px;
-      }
-
-      .footer {
-        display: flex;
-        max-width: 80vw;
-        margin: auto;
-        justify-content: space-evenly;
-        padding: 20px 0;
-        gap: 30px;
-        flex-direction: row;
-      }
-      .footer div {
-        width: 25%;
-      }
-      .footer h2 {
-        color: white;
-        margin-bottom: 15px;
-      }
-
-      .footer .second ul {
-        list-style: none;
-        padding: 0;
-      }
-      .footer .second li {
-        margin-bottom: 8px;
-        color: gray;
-        cursor: pointer;
-        transition: color 0.3s;
-      }
-      .footer .second li:hover {
-        color: white;
-      }
-      .footer a {
-        color: gray;
-        text-decoration: none;
-        transition: color 0.3s;
-      }
-      .footer a:hover {
-        color: white;
-      }
-
-      footer .footer-rights {
-        text-align: center;
-        color: gray;
-        width: 100%;
-        margin-top: 15px;
-      }
-
-      /* Mobile-Oriented Styles (Max-width 768px) */
-      @media screen and (max-width: 768px) {
-        body {
-          font-size: 16px;
-        }
-
-        nav {
-          flex-direction: column;
-          height: auto;
-          padding: 15px 0;
-        }
-        nav .left {
-          font-size: 1.5rem;
-        }
-        nav ul {
-          margin-top: 10px;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-        nav ul li {
-          margin: 5px 8px;
-        }
-        nav ul li a {
-          font-size: 0.9rem;
-        }
-
-        main hr {
-          margin: 30px 5vw;
-        }
-
-        .projectsSection {
-          max-width: 90vw;
-          padding: 40px 0;
-        }
-        .projectsSection h1 {
-          font-size: 2rem;
-          margin-bottom: 30px;
-        }
-        .project-card {
-          padding: 20px;
-          margin: 0 5px;
-        }
-        .project-card h2 {
-          font-size: 1.5rem;
-        }
-        .project-card p {
-          font-size: 0.95rem;
-        }
-        .empty-state {
-          padding: 30px;
-          margin: 40px auto;
-        }
-        .empty-state p {
-          font-size: 1rem;
-        }
-        .project-card .tag {
-            font-size: 0.8rem;
-            padding: 4px 8px;
-        }
-
-        .footer {
-          flex-direction: column;
-          align-items: center;
-          gap: 30px;
-          max-width: 90vw;
-        }
-        .footer div {
-          width: 90%;
-          max-width: 300px;
-          text-align: center;
-        }
-        .footer .second ul {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 10px 15px;
-        }
-        .footer .second li {
-          margin-bottom: 0;
-        }
-      }
-
-      /* Tablet Adjustments (769px to 1200px) */
-      @media screen and (min-width: 769px) and (max-width: 1200px) {
-        .projectsSection {
-          max-width: 90vw;
-          padding: 60px 0;
-        }
-        main hr {
-          margin: 40px 5vw;
-        }
-        .footer {
-          max-width: 90vw;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="css/projects.css" />
   </head>
 
   <body>
@@ -315,22 +30,94 @@
     </header>
     <main>
       <section class="projectsSection">
-        <span class="text-gray" style="display: block; margin-bottom: 10px;">My journey in code so far</span>
+        <span
+          class="text-gray"
+          style="display: block; margin-bottom: 10px"
+          >What I've Built</span
+        >
         <h1>My Projects</h1>
-        <div class="project-container">
-            <div class="project-card">
-                <h2>Early Algorithmic Implementations</h2>
-                <p>Initial attempts at solving classic computer science problems, exploring data structures and foundational logic in a programming environment.</p>
-                <div class="tags">
-                    <span class="tag">C/C++</span>
-                    <span class="tag">Algorithms</span>
-                    <span class="tag">Logic</span>
-                </div>
-            </div>
 
-            <div class="empty-state">
-                <p>More projects are currently under development. Check back later!</p>
+        <div class="project-grid">
+          <div class="project-box">
+            <div class="project-image">
+              <img src="photos/p1.png" alt="Project Image 1" />
             </div>
+            <div class="project-content">
+              <h2>Weather Web App</h2>
+              <span class="tech-stack">HTML, CSS, JavaScript, Weather API</span>
+              <p>
+                A dynamic web application that fetches real-time weather data
+                based on user input (city name) using a public API. Features
+                intuitive UI and condition-based icon display.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/divyanshuchede71-hash/WeatherApp"
+                  target="_blank"
+                  class="btn"
+                  >GitHub</a
+                >
+                <a
+                  href="[Link to Live Project 1]"
+                  target="_blank"
+                  class="btn-secondary"
+                  >Live Demo</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project-box">
+            <div class="project-image">
+              <img src="photos/p2.png" alt="Project Image 2" />
+            </div>
+            <div class="project-content">
+              <h2>Interactive To-Do List</h2>
+              <span class="tech-stack">HTML, CSS, JavaScript (DOM Manipulation)</span>
+              <p>
+                A classic To-Do List application allowing users to add, delete,
+                and mark tasks as complete. It demonstrates strong proficiency in
+                vanilla JavaScript and DOM manipulation.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/divyanshuchede71-hash/ToDoList"
+                  target="_blank"
+                  class="btn"
+                  >GitHub</a
+                >
+                <a
+                  href="[Link to Live Project 2]"
+                  target="_blank"
+                  class="btn-secondary"
+                  >Live Demo</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="project-box">
+            <div class="project-image">
+              <img src="photos/p3.png" alt="Project Image 3" />
+            </div>
+            <div class="project-content">
+              <h2>Basic Banking System</h2>
+              <span class="tech-stack">C++ Programming, OOP Concepts</span>
+              <p>
+                A command-line interface application simulating basic banking
+                operations like account creation, deposits, withdrawals, and
+                balance inquiries, implementing Object-Oriented Programming (OOP).
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/divyanshuchede71-hash/BankSystem_CPlusPlus"
+                  target="_blank"
+                  class="btn"
+                  >GitHub</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -340,18 +127,16 @@
       <div class="footer">
         <div class="first">
           <h3>Divyanshuchede71-hash</h3>
-          <p style="color: gray; font-size: 0.9rem">
-            
-          </p>
+          <p style="color: gray; font-size: 0.9rem"></p>
         </div>
         <div class="second">
           <h2>Quick Links</h2>
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Projects</li>
-            <li>Contact Me</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contactme.html">Contact Me</a></li>
           </ul>
         </div>
         <div class="third">
@@ -362,13 +147,15 @@
         <div class="fourth">
           <h2>Connect</h2>
           <p>
-            <a href="https://www.linkedin.com/in/dchede24">
-            LinkedIn</a></p>
-          <p><a href="https://github.com/divyanshuchede71-hash">GitHub</a></p>
+            <a href="https://www.linkedin.com/in/dchede24"> LinkedIn</a>
+          </p>
+          <p>
+            <a href="https://github.com/divyanshuchede71-hash">GitHub</a>
+          </p>
         </div>
       </div>
       <div class="footer-rights">
-        Copyright &#169;  | All Rights Reserved
+        Copyright &#169; | All Rights Reserved
       </div>
     </footer>
   </body>
