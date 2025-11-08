@@ -5,7 +5,7 @@
 }
 body {
   background-image: url('photos/bg.png');
-  background-color: rgb(0, 0, 33);
+  background-color: rgb(0, 0, 33); 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -57,115 +57,71 @@ main hr {
   color: gray;
 }
 
-/* --- Contact Page Specific Styles --- */
+/* --- Contact Section Styles --- */
 .contactSection {
   max-width: 80vw;
   margin: auto;
   padding: 80px 0;
   text-align: center;
-  min-height: 70vh;
+  min-height: 50vh;
 }
 .contactSection h1 {
   font-size: 2.5rem;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   color: white;
 }
 .contact-container {
   display: flex;
   justify-content: center;
   gap: 50px;
-  max-width: 1000px;
-  margin: auto;
-  text-align: left;
+  margin-top: 50px;
+  flex-wrap: wrap;
 }
-
-.contact-info,
-.contact-form-container {
+.contact-info {
   background-color: rgb(3, 3, 75);
-  padding: 30px;
+  padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  flex: 1;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 600px; 
+  text-align: left;
+  border-left: 5px solid violet; 
 }
-.contact-info h2,
-.contact-form-container h2 {
-  color: violet;
-  margin-bottom: 25px;
-  font-size: 1.8rem;
-}
-
-/* Contact Info Styles */
-.info-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
-.info-item .icon {
-  font-size: 1.5rem;
-  margin-right: 15px;
+.contact-info h2 {
   color: cyan;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
 }
-.info-item p {
+.contact-info p {
   color: #ccc;
-  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+.contact-info a {
+  color: gray;
+  text-decoration: none;
+  transition: color 0.3s;
+  display: block;
+  margin-top: 5px;
+}
+.contact-info a:hover {
+  color: violet;
 }
 .social-links {
   margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgb(14 14 93);
 }
-.social-links a {
-  color: cyan;
-  text-decoration: none;
-  margin-right: 20px;
-  font-size: 1.1rem;
-  transition: color 0.3s;
+.social-links h3 {
+    color: violet;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
 }
-.social-links a:hover {
-  color: white;
+.social-links p {
+    margin-bottom: 10px;
 }
+/* --- End of Contact Section Styles --- */
 
-/* Form Styles */
-.form-group {
-  margin-bottom: 20px;
-}
-.form-group label {
-  display: block;
-  color: #ccc;
-  margin-bottom: 8px;
-  font-weight: 500;
-}
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid rgb(87, 54, 87);
-  border-radius: 5px;
-  background-color: rgb(14 14 93);
-  color: white;
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-}
-.form-group textarea {
-  resize: vertical;
-}
-.submit-btn {
-  display: inline-block;
-  background-color: violet;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  transition: background-color 0.3s, transform 0.3s;
-}
-.submit-btn:hover {
-  background-color: cyan;
-  color: rgb(0, 0, 33);
-  transform: translateY(-2px);
-}
-
-/* --- Footer Styles --- */
+/* --- Footer Styles (Desktop/Tablet) --- */
 footer {
   background-color: rgb(3, 3, 75);
   padding: 20px 0;
@@ -195,10 +151,11 @@ footer {
   padding: 0;
 }
 
-/* Quick Links Default Color */
+/* Quick Links Text Color (Default) */
 .footer .second li a {
-  color: gray; /* Explicitly sets quick link text color to gray */
+  color: gray; /* Setting Quick Link text color */
   text-decoration: none;
+  cursor: pointer;
   transition: color 0.3s;
   display: block;
 }
@@ -208,7 +165,7 @@ footer {
 .footer .second li {
   margin-bottom: 8px;
 }
-/* Connect Links Default Color */
+/* Connect Links Text Color (Default) */
 .footer a {
   color: gray;
   text-decoration: none;
@@ -216,7 +173,6 @@ footer {
 }
 .footer a:hover {
   color: white;
-  text-decoration: underline;
 }
 
 footer .footer-rights {
@@ -227,61 +183,49 @@ footer .footer-rights {
 }
 
 /* --- Media Queries --- */
-@media screen and (max-width: 1000px) {
-  .contact-container {
-    flex-direction: column;
-    max-width: 90vw;
-    gap: 30px;
-  }
-}
+
+/* Mobile Optimization (Max-width 768px) */
 @media screen and (max-width: 768px) {
-  .contactSection {
-    padding: 40px 0;
-  }
-  .contactSection h1 {
-    font-size: 2rem;
-  }
   nav {
     flex-direction: column;
     height: auto;
     padding: 15px 0;
   }
-  nav .left {
-    font-size: 1.5rem;
-  }
   nav ul {
     margin-top: 10px;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
   nav ul li {
     margin: 5px 8px;
   }
-  nav ul li a {
-    font-size: 0.9rem;
-  }
   main hr {
-    margin: 30px 5vw;
-  }
-  .contact-info,
-  .contact-form-container {
-    padding: 20px;
-  }
-  .contact-info h2,
-  .contact-form-container h2 {
-    font-size: 1.5rem;
-  }
-  .info-item p {
-    font-size: 1rem;
-  }
-  .form-group label {
-    font-size: 0.95rem;
-  }
-  .submit-btn {
-    font-size: 1rem;
-    padding: 10px 20px;
+    margin: 30px 20px;
   }
 
+  .contactSection {
+      padding: 40px 10px;
+  }
+  .contactSection h1 {
+      font-size: 2rem;
+  }
+  .contact-container {
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      margin-top: 30px;
+  }
+  .contact-info {
+      max-width: 90%;
+      width: 90%;
+      padding: 20px;
+  }
+  .contact-info h2 {
+      font-size: 1.4rem;
+  }
+  
+  /* Footer Mobile Stacking */
   .footer {
     flex-direction: column;
     align-items: center;
@@ -289,7 +233,7 @@ footer .footer-rights {
     max-width: 90vw;
   }
   .footer div {
-    width: 100%;
+    width: 90%;
     max-width: 300px;
     text-align: center;
   }
@@ -297,9 +241,27 @@ footer .footer-rights {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px 15px;
+    gap: 15px;
   }
   .footer .second li {
     margin-bottom: 0;
+  }
+}
+
+/* Tablet Optimization (769px to 1200px) */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  nav {
+    flex-direction: row; /* Keep nav horizontal */
+    height: 80px;
+    padding: 0;
+  }
+  .contactSection {
+      padding: 60px 0;
+  }
+  main hr {
+    margin: 40px 5vw;
+  }
+  .footer {
+    max-width: 90vw;
   }
 }
