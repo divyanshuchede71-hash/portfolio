@@ -10,276 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        background-image: url('photos/bg.png');
-        background-color: rgb(0, 0, 33);
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        color: white;
-        font-family: "Poppins", sans-serif;
-      }
-
-      nav {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 80px;
-        background-color: rgb(3, 3, 75);
-      }
-      nav ul {
-        display: flex;
-        justify-content: center;
-      }
-      nav ul li {
-        list-style: none;
-        margin: 0 23px;
-      }
-      nav ul li a {
-        text-decoration: none;
-        color: white;
-        transition: all 0.3s ease;
-      }
-      nav ul li a:hover {
-        color: cyan;
-        font-size: 1.05rem;
-      }
-      main hr {
-        border: 0;
-        background: rgb(87, 54, 87);
-        height: 1.2px;
-        margin: 40px 84px;
-      }
-      .left {
-        font-size: 2rem;
-      }
-
-      .purple {
-        color: violet;
-      }
-      .violet {
-        color: rgb(255, 0, 255);
-      }
-      .text-gray {
-        color: gray;
-      }
-
-      .contactSection {
-        max-width: 80vw;
-        margin: auto;
-        padding: 80px 0;
-        text-align: center;
-        min-height: 50vh;
-      }
-      .contactSection h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        color: white;
-      }
-      .contact-container {
-        display: flex;
-        justify-content: center;
-        gap: 50px;
-        margin-top: 50px;
-        flex-wrap: wrap;
-      }
-      .contact-info {
-        background-color: rgb(3, 3, 75);
-        padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        max-width: 600px;
-        text-align: left;
-        border-left: 5px solid violet;
-      }
-      .contact-info h2 {
-        color: cyan;
-        margin-bottom: 20px;
-        font-size: 1.6rem;
-      }
-      .contact-info p {
-        color: #ccc;
-        margin-bottom: 15px;
-        font-size: 1rem;
-      }
-      .contact-info a {
-        color: gray;
-        text-decoration: none;
-        transition: color 0.3s;
-        display: block;
-        margin-top: 5px;
-        word-break: break-all;
-      }
-      .contact-info a:hover {
-        color: violet;
-      }
-      .social-links {
-        margin-top: 30px;
-        padding-top: 20px;
-        border-top: 1px solid rgb(14 14 93);
-      }
-      .social-links h3 {
-        color: violet;
-        margin-bottom: 15px;
-        font-size: 1.4rem;
-      }
-      .social-links p {
-        margin-bottom: 10px;
-      }
-
-      footer {
-        background-color: rgb(3, 3, 75);
-        padding: 20px 0;
-        height: auto;
-        padding: 20px;
-      }
-
-      .footer {
-        display: flex;
-        max-width: 80vw;
-        margin: auto;
-        justify-content: space-evenly;
-        padding: 20px 0;
-        gap: 30px;
-        flex-direction: row;
-      }
-      .footer div {
-        width: 25%;
-      }
-      .footer h2 {
-        color: white;
-        margin-bottom: 15px;
-      }
-
-      .footer .second ul {
-        list-style: none;
-        padding: 0;
-      }
-      .footer .second li {
-        margin-bottom: 8px;
-        color: gray;
-        cursor: pointer;
-        transition: color 0.3s;
-      }
-      .footer .second li:hover {
-        color: white;
-      }
-      .footer a {
-        color: gray;
-        text-decoration: none;
-        transition: color 0.3s;
-      }
-      .footer a:hover {
-        color: white;
-      }
-
-      footer .footer-rights {
-        text-align: center;
-        color: gray;
-        width: 100%;
-        margin-top: 15px;
-      }
-
-      @media screen and (max-width: 768px) {
-        body {
-          font-size: 16px;
-        }
-
-        nav {
-          flex-direction: column;
-          height: auto;
-          padding: 15px 0;
-        }
-        nav .left {
-          font-size: 1.5rem;
-        }
-        nav ul {
-          margin-top: 10px;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-        nav ul li {
-          margin: 5px 8px;
-        }
-        nav ul li a {
-          font-size: 0.9rem;
-        }
-
-        main hr {
-          margin: 30px 5vw;
-        }
-
-        .contactSection {
-          max-width: 90vw;
-          padding: 40px 0;
-        }
-        .contactSection h1 {
-          font-size: 2rem;
-          margin-bottom: 30px;
-        }
-        .contact-container {
-          flex-direction: column;
-          gap: 30px;
-          align-items: center;
-        }
-        .contact-info {
-          max-width: 90%;
-          width: 100%;
-          padding: 30px 20px;
-          margin: 0 auto;
-        }
-        .contact-info h2 {
-          font-size: 1.4rem;
-        }
-        .contact-info p {
-          font-size: 0.95rem;
-        }
-
-        .footer {
-          flex-direction: column;
-          align-items: center;
-          gap: 30px;
-          max-width: 90vw;
-        }
-        .footer div {
-          width: 90%;
-          max-width: 300px;
-          text-align: center;
-        }
-        .footer .second ul {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 10px 15px;
-        }
-        .footer .second li {
-          margin-bottom: 0;
-        }
-      }
-
-      @media screen and (min-width: 769px) and (max-width: 1200px) {
-        .contactSection {
-          max-width: 90vw;
-          padding: 60px 0;
-        }
-        .contact-info {
-            max-width: 90%;
-            padding: 40px;
-        }
-        main hr {
-          margin: 40px 5vw;
-        }
-        .footer {
-          max-width: 90vw;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="contactme.css" />
   </head>
 
   <body>
@@ -291,7 +22,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li><a href="Projects.html">Projects</a></li>
             <li><a href="contactme.html">Contact me</a></li>
           </ul>
         </div>
@@ -299,42 +30,52 @@
     </header>
     <main>
       <section class="contactSection">
-        <span class="text-gray" style="display: block; margin-bottom: 10px;">Let's build something together or just connect!</span>
+        <span class="text-gray" style="display: block; margin-bottom: 10px;">Get in touch</span>
         <h1>Contact Me</h1>
 
         <div class="contact-container">
-            <div class="contact-info">
-                <h2>Direct & Professional Contact</h2>
-                <p>Feel free to reach out directly via email or phone for project ideas, freelance inquiries, or collaborations. I look forward to connecting!</p>
-                <p>
-                    <strong>Email:</strong>
-                    <a href="mailto:divyanshuchede71@gmail.com">divyanshuchede71@gmail.com</a>
-                </p>
-                <p>
-                    <strong>Phone:</strong>
-                    <a href="tel:+919309291459">+91 9309291459</a>
-                </p>
-                <p>
-                    <strong>LinkedIn:</strong>
-                    <a href="https://www.linkedin.com/in/dchede24" target="_blank">linkedin.com/in/dchede24</a>
-                </p>
-                <p>
-                    <strong>GitHub:</strong>
-                    <a href="https://github.com/divyanshuchede71-hash" target="_blank">github.com/divyanshuchede71-hash</a>
-                </p>
-
-                <div class="social-links">
-                    <h3>Connect on Social Media</h3>
-                    <p>
-                        <strong>Instagram:</strong>
-                        <a href="https://www.instagram.com/divyanshuchede?igsh=MjZnMW43eGI3amz0" target="_blank">divyanshuchede</a>
-                    </p>
-                    <p>
-                        <strong>Facebook:</strong>
-                        <a href="https://www.facebook.com/divyanshu.chede" target="_blank">divyanshuchede</a>
-                    </p>
-                </div>
+          <div class="contact-info">
+            <h2>Contact Details</h2>
+            <div class="info-item">
+              <span class="icon">📧</span>
+              <p>Email: divyanshuchede71@gmail.com</p>
             </div>
+            <div class="info-item">
+              <span class="icon">📞</span>
+              <p>Phone: +91 9309291459</p>
+            </div>
+            <div class="info-item">
+              <span class="icon">📍</span>
+              <p>Location: Nagpur, Maharashtra, India</p>
+            </div>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/dchede24" target="_blank">LinkedIn</a>
+              <a href="https://github.com/divyanshuchede71-hash" target="_blank">GitHub</a>
+            </div>
+          </div>
+
+          <div class="contact-form-container">
+            <h2>Send a Message</h2>
+            <form class="contact-form" action="#" method="POST">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
         </div>
       </section>
 
@@ -343,19 +84,19 @@
     <footer>
       <div class="footer">
         <div class="first">
-          <h2>divyanshuchede71-hash</h2>
+          <h2>Divyanshu's Portfolio</h2>
           <p style="color: gray; font-size: 0.9rem">
-           
+            Passionate CSE student and aspiring Web Developer.
           </p>
         </div>
         <div class="second">
           <h2>Quick Links</h2>
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Projects</li>
-            <li>Contact Me</li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="contactme.html">Contact Me</a></li>
           </ul>
         </div>
         <div class="third">
