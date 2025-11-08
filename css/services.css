@@ -116,7 +116,7 @@ main hr {
   left: 0;
 }
 
-/* --- Footer Styles --- */
+/* --- Footer Styles (Desktop/Tablet) --- */
 footer {
   background-color: rgb(3, 3, 75);
   padding: 20px 0;
@@ -146,18 +146,20 @@ footer {
   padding: 0;
 }
 
+/* Quick Links Default Color */
 .footer .second li a {
-  color: gray;
+  color: gray; /* Default color set to gray for consistency outside media query */
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s;
-  display: block; 
+  display: block;
 }
 .footer .second li a:hover {
-  color: white; 
+  color: white;
 }
+/* General Footer Links (Connect section) */
 .footer a {
-  color: gray; 
+  color: gray;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -174,6 +176,8 @@ footer .footer-rights {
 }
 
 /* --- Media Queries --- */
+
+/* Mobile-Oriented Styles (Max-width 768px) */
 @media screen and (max-width: 768px) {
   body {
     font-size: 16px;
@@ -211,7 +215,7 @@ footer .footer-rights {
     font-size: 2rem;
   }
   .service-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Single column on mobile */
     gap: 20px;
     margin-top: 30px;
   }
@@ -227,66 +231,31 @@ footer .footer-rights {
   .service-box ul li {
     font-size: 0.9rem;
   }
-
-  footer {
-  background-color: rgb(3, 3, 75);
-  padding: 20px 0;
-  height: auto;
-  padding: 20px;
+  
+  /* --- Footer Mobile Optimization (Correct Placement) --- */
+  .footer {
+    flex-direction: column; /* Stack footer columns vertically */
+    align-items: center;
+    gap: 30px;
+    max-width: 90vw;
+  }
+  .footer div {
+    width: 90%; /* Make footer columns take up most of the width */
+    max-width: 300px;
+    text-align: center;
+  }
+  .footer .second ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 15px;
+  }
+  .footer .second li {
+    margin-bottom: 0;
+  }
 }
 
-.footer {
-  display: flex;
-  max-width: 80vw;
-  margin: auto;
-  justify-content: space-evenly;
-  padding: 20px 0;
-  gap: 30px;
-  flex-direction: row;
-}
-.footer div {
-  width: 25%;
-}
-.footer h2 {
-  color: white;
-  margin-bottom: 15px;
-}
-
-.footer .second ul {
-  list-style: none;
-  padding: 0;
-}
-.footer .second li {
-  margin-bottom: 8px;
-}
-
-
-.footer .second li a {
-  color: #DDA0DD; 
-  cursor: pointer;
-  transition: color 0.3s;
-  text-decoration: none;
-}
-.footer .second li a:hover {
-  color: white;
-}
-
-.footer a {
-  color: #DDA0DD; 
-  text-decoration: none;
-  transition: color 0.3s;
-}
-.footer a:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-footer .footer-rights {
-  text-align: center;
-  color: gray;
-  width: 100%;
-  margin-top: 15px;
-}
+/* Tablet Adjustments (769px to 1200px) */
 @media screen and (min-width: 769px) and (max-width: 1200px) {
   .servicesSection {
     max-width: 90vw;
