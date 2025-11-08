@@ -5,7 +5,7 @@
 }
 body {
   background-image: url('photos/bg.png');
-  background-color: rgb(0, 0, 33); 
+  background-color: rgb(0, 0, 33);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -168,10 +168,10 @@ footer {
 
 /* Quick Links Default Color */
 .footer .second li a {
-  color: gray; /* Explicitly sets quick link text color to gray */
+  color: gray;
   text-decoration: none;
   transition: color 0.3s;
-  display: block; /* Ensures the whole list item is clickable link */
+  display: block;
 }
 .footer .second li a:hover {
   color: white;
@@ -197,23 +197,29 @@ footer .footer-rights {
 }
 
 /* --- Media Queries --- */
-@media screen and (max-width: 1200px) {
+
+/* Mobile Optimization (Max-width 768px) */
+@media screen and (max-width: 768px) {
   nav {
     flex-direction: column;
     height: auto;
-    padding: 10px 0;
+    padding: 15px 0;
+  }
+  nav .left {
+    font-size: 1.5rem;
   }
   nav ul {
     margin-top: 10px;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row; /* Keep links inline, but allow wrap */
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 0;
   }
   nav ul li {
-    margin: 5px 0;
+    margin: 5px 8px;
   }
   main hr {
-    margin: 40px 20px;
+    margin: 30px 20px;
   }
 
   .projectsSection {
@@ -240,14 +246,15 @@ footer .footer-rights {
       font-size: 1.1rem;
   }
 
-
+  /* Footer Mobile Stacking */
   .footer {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    max-width: 90vw;
   }
   .footer div {
-    width: 100%;
+    width: 90%; /* Increase width for better readability on mobile */
     max-width: 300px;
     text-align: center;
   }
@@ -259,5 +266,24 @@ footer .footer-rights {
   }
   .footer .second li {
     margin-bottom: 0;
+  }
+}
+
+/* Tablet / Large Phone Optimization (769px to 1200px) */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  /* Retain desktop navigation style here if desired */
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  .projectsSection {
+    max-width: 90vw;
+    padding: 60px 0;
+  }
+  main hr {
+    margin: 40px 5vw;
+  }
+  .footer {
+    max-width: 90vw;
   }
 }
