@@ -280,6 +280,20 @@
           justify-content: center;
           gap: 10px 15px;
         }
+        
+      .footer .second ul li a {
+    color: white; /* Default link color (white for contrast) */
+    text-decoration: none; /* Removes the default underline */
+    transition: color 0.3s ease-in-out; /* Smooth transition for color change on hover */
+    display: inline-block; /* Allows padding/margin to be applied properly */
+    padding: 2px 0; /* A little vertical spacing */
+     }
+
+
+    .footer .second ul li a:hover {
+    color: #a020f0; 
+    text-decoration: underline; 
+     }
         .footer .second li {
           margin-bottom: 0;
         }
