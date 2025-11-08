@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('photos/bg.png');
+  background-color: rgb(0, 0, 33);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  background-color: rgb(3, 3, 75);
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  list-style: none;
+  margin: 0 23px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+nav ul li a:hover {
+  color: cyan;
+  font-size: 1.05rem;
+}
+main hr {
+  border: 0;
+  background: rgb(87, 54, 87);
+  height: 1.2px;
+  margin: 40px 84px;
+}
+.left {
+  font-size: 2rem;
+}
+
+.purple {
+  color: violet;
+}
+.violet {
+  color: rgb(255, 0, 255);
+}
+.text-gray {
+  color: gray;
+}
+
+/* --- Projects Page Specific Styles --- */
+.projectsSection {
+  max-width: 80vw;
+  margin: auto;
+  padding: 80px 0;
+  text-align: center;
+}
+.projectsSection h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: white;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 20px;
+}
+.project-box {
+  background-color: rgb(3, 3, 75);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(87, 54, 87);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.project-box:hover {
+  transform: translateY(-8px);
+  border-color: violet;
+}
+.project-image {
+  margin-bottom: 15px;
+  overflow: hidden;
+  border-radius: 5px;
+  max-height: 200px;
+}
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.project-box:hover .project-image img {
+  transform: scale(1.05);
+}
+.project-content h2 {
+  color: cyan;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+.project-content .tech-stack {
+  display: block;
+  color: violet;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+.project-content p {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.project-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+.btn,
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 0.95rem;
+}
+.btn {
+  background-color: violet;
+  color: white;
+  border: 1px solid violet;
+}
+.btn:hover {
+  background-color: cyan;
+  color: rgb(0, 0, 33);
+  border-color: cyan;
+}
+.btn-secondary {
+  background-color: transparent;
+  color: violet;
+  border: 1px solid violet;
+}
+.btn-secondary:hover {
+  background-color: rgb(87, 54, 87);
+  color: white;
+}
+
+/* --- Footer Styles --- */
+footer {
+  background-color: rgb(3, 3, 75);
+  padding: 20px 0;
+  height: auto;
+  padding: 20px;
+}
+.footer {
+  display: flex;
+  max-width: 80vw;
+  margin: auto;
+  justify-content: space-evenly;
+  padding: 20px 0;
+  gap: 30px;
+  flex-direction: row;
+}
+.footer div {
+  width: 25%;
+}
+.footer h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+.footer .second ul {
+  list-style: none;
+  padding: 0;
+}
+/* Quick Links Default Color */
+.footer .second li a {
+  color: gray; /* Quick Link text color set to gray */
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  display: block;
+}
+.footer .second li a:hover {
+  color: white; /* Hover effect */
+}
+/* Connect Links Default Color */
+.footer a {
+  color: gray; /* Connect link color set to gray */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+.footer .second li {
+  margin-bottom: 8px;
+}
+footer .footer-rights {
+  text-align: center;
+  color: gray;
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* --- Media Queries --- */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+  }
+  nav .left {
+    font-size: 1.5rem;
+  }
+  nav ul {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav ul li {
+    margin: 5px 8px;
+  }
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  main hr {
+    margin: 30px 5vw;
+  }
+
+  .projectsSection {
+    max-width: 90vw;
+    padding: 40px 0;
+  }
+  .projectsSection h1 {
+    font-size: 2rem;
+  }
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .project-box {
+    padding: 15px;
+  }
+  .project-content h2 {
+    font-size: 1.3rem;
+  }
+  .project-content p {
+    font-size: 0.95rem;
+  }
+  .project-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn,
+  .btn-secondary {
+    padding: 8px 15px;
+    text-align: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 90vw;
+  }
+  .footer div {
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+  }
+  .footer .second ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 15px;
+  }
+  .footer .second li {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .projectsSection {
+    max-width: 90vw;
+    padding: 60px 0;
+  }
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  main hr {
+    margin: 40px 5vw;
+  }
+  .footer {
+    max-width: 90vw;
+  }
+}
